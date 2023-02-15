@@ -1,4 +1,4 @@
-# google-it-automation
+# Google IT Automation with Python
 
 
 This is where I will be posting my certificate and record my findings and reflections.

@@ -7,11 +7,8 @@ We'll start off by diving into the basics of writing a computer program. Along t
 
 ### WHAT YOU WILL LEARN
 * What Python is and why Python is relevant to automation
-
 * How to write short Python scripts to perform automated actions
-
 * How to use the basic Python structures: strings, lists, and dictionaries
-
 * How to create your own Python objects
 
 ### SKILLS YOU WILL GAIN

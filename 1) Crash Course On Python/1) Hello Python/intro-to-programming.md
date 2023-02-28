@@ -1,7 +1,6 @@
-__Congratulations! You passed!__
-__Grade received 100%__
-__To pass 80% or higher__
+## Intro to Programming
 
+__Grade received: 100%__
 
 Question 1
 What’s a computer program?

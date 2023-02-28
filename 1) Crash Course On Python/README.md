@@ -17,5 +17,3 @@ We'll start off by diving into the basics of writing a computer program. Along t
 * Basic Python Syntax
 * Python Programming
 * Object-Oriented Programming (OOP)
-
-![Crash Course On Python](Crash%20Course%20On%20Python'/Crash%20Course%20on%20Python%20Certificate.pdf)

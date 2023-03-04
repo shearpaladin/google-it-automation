@@ -77,7 +77,7 @@ What do you call a combination of numbers, symbols, or other values that produce
 
 
 * An explicit conversion
-* An expression
+* **An expression**
 * A variable
 * An implicit conversion
 

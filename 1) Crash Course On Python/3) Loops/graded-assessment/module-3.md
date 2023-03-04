@@ -6,236 +6,210 @@ __Grade received: 100%__
 
 ## Question 1
 
-Complete the function by filling in the missing parts. The color_translator function receives the name of a color, then prints its hexadecimal value. Currently, it only supports the three additive primary colors (red, green, blue), so it returns "unknown" for all other colors.
+Fill in the blanks of this code to print out the numbers 1 through 7.
 
 ```python
-def color_translator(color):
-	if color == "red":
-		hex_color = "#ff0000"
-	elif color == "green":
-		hex_color = "#00ff00"
-	elif color == "blue":
-		hex_color = "#0000ff"
-	else:
-		hex_color = "unknown"
-	return hex_color
-
-print(color_translator("blue")) # Should be #0000ff
-print(color_translator("yellow")) # Should be unknown
-print(color_translator("red")) # Should be #ff0000
-print(color_translator("black")) # Should be unknown
-print(color_translator("green")) # Should be #00ff00
-print(color_translator("")) # Should be unknown
+number = 1
+while number <= 7:
+	print(number, end=" ")
+	number+=1
 ```
 
-> Well done! You're breezing through the if-else clauses!
+> Nice job! You're really getting the hang of what goes into
+the while loops!
 
 <br>
 
 ## Question 2
 
-What's the value of this Python expression: "big" > "small"
+The show_letters function should print out each letter of a word on a separate line. Fill in the blanks to make that happen.
 
-* True
-* **False**
-* big
-* small
+```python
+def show_letters(word):
+	for letter in word:
+		print(letter)
 
-> You nailed it! The conditional operator > checks if two values are equal. The result of that operation is a boolean: either True or False. Alphabetically, "big" is less than "small".
+show_letters("Hello")
+# Should print one line per letter
+```
+
+> Great job! You're working the "for" loops the way they're
+supposed to be done!
 
 <br>
 
 ## Question 3
 
-What is the elif keyword used for?
+Complete the function digits(n) that returns how many digits the number has. For example: 25 has 2 digits and 144 has 3 digits. Tip: you can figure out the digits of a number by dividing it by 10 once per digit until there are no digits left.
 
-* To mark the end of the if statement
-* **To handle more than two comparison cases**
-* To replace the "or" clause in the if statement
-* Nothing - it's a misspelling of the else-if keyword
+```python
+def digits(n):
+	count = 0
+	if n == 0:
+		return 1
+	while (n > 0):
+		count += 1
+		n = n//10
+	return count
+	
+print(digits(25))   # Should print 2
+print(digits(144))  # Should print 3
+print(digits(1000)) # Should print 4
+print(digits(0))    # Should print 1
+```
 
-> You got it! The elif keyword is used in place of multiple embedded if clauses, when a single if/else structure is not enough.
+> Woohoo! You've cracked the code of writing code!
 
 <br>
 
 ## Question 4
 
-Students in a class receive their grades as Pass/Fail. Scores of 60 or more (out of 100) mean that the grade is "Pass". For lower scores, the grade is "Fail". In addition, scores above 95 (not included) are graded as "Top Score". Fill in this function so that it returns the proper grade.
+Question 4
+This function prints out a multiplication table (where each number is the result of multiplying the first number of its row by the number at the top of its column). Fill in the blanks so that calling multiplication_table(1, 3) will print out:
+
+1 2 3 
+
+2 4 6 
+
+3 6 9
 
 ```python
-def exam_grade(score):
-	if score > 95:
-		grade = "Top Score"
-	elif score >= 60:
-		grade = "Pass"
-	else:
-		grade = "Fail"
-	return grade
+def multiplication_table(start, stop):
+	for x in range(start, stop+1):
+		for y in range(start, stop+1):
+			print(str(x*y), end=" ")
+		print()
 
-print(exam_grade(65)) # Should be Pass
-print(exam_grade(55)) # Should be Fail
-print(exam_grade(60)) # Should be Pass
-print(exam_grade(95)) # Should be Pass
-print(exam_grade(100)) # Should be Top Score
-print(exam_grade(0)) # Should be Fail
+multiplication_table(1, 3)
+# Should print the multiplication table shown above
 ```
 
-> Good job! You're getting the hang of it!.
+> Awesome! You've stepped up to the challenge of one of the
+more complex coding practices, nested loops!
 
 
 <br>
 
 ## Question 5
 
-What's the value of this Python expression: 11 % 5?
+The counter function counts down from start to stop when start is bigger than stop, and counts up from start to stop otherwise. Fill in the blanks to make this work correctly.
 
+```python
+def counter(start, stop):
+	x = start
+	if start > stop:
+		return_string = "Counting down: "
+		while x >= stop:
+			return_string += str(x)
+			if x > stop:
+				return_string += ","
+			x-=1
+	else:
+		return_string = "Counting up: "
+		while x <= stop:
+			return_string += str(x)
+			if x < stop:
+				return_string += ","
+			x+=1
+	return return_string
 
+print(counter(1, 10)) # Should be "Counting up: 1,2,3,4,5,6,7,8,9,10"
+print(counter(2, 1)) # Should be "Counting down: 2,1"
+print(counter(5, 5)) # Should be "Counting up: 5"
+```
 
-* 2.2
-* 2
-* **1**
-* 0
-
-> Excellent! "%" is the modulo operator, which returns the remainder of the integer division between two numbers. 11 divided by 5 equals 2 with remainder of 1.
+> You nailed it! You've figured out all of the situations that
+need to be considered!
 
 
 <br>
 
 ## Question 6
 
-Complete the body of the format_name function. This function receives the first_name and last_name parameters and then returns a properly formatted string.
-
-Specifically:
-
-If both the last_name and the first_name parameters are supplied, the function should return like so:
+Question 6
+The even_numbers function returns a space-separated string of all positive numbers that are divisible by 2, up to and including the maximum that's passed into the function. For example, even_numbers(6) returns “2 4 6”. Fill in the blank to make this work.
 
 ```python
-Name: Fitzgerald, Ella
+def even_numbers(maximum):
+	return_string = ""
+	for x in range(2, maximum+1, 2):
+		return_string += str(x) + " "
+	return return_string.strip()
+
+print(even_numbers(6))  # Should be 2 4 6
+print(even_numbers(10)) # Should be 2 4 6 8 10
+print(even_numbers(1))  # No numbers displayed
+print(even_numbers(3))  # Should be 2
+print(even_numbers(0))  # No numbers displayed
 ```
 
-If only one name parameter is supplied (either the first name or the last name) , the function should return like so:
-
-```python
-print(format_name("Adele", ""))
-Name: Adele
-```
-
-or
-
-```python
-print(format_name("", "Einstein"))
-Name: Einstein
-```
-
-Finally, if both names are blank, the function should return the empty string:
-```python
-print(format_name("", ""))
-```
-
-Implement below:
-```python
-def format_name(first_name, last_name):
-	# code goes here
-	string = 'Name: ' + ', '.join([name for name in [last_name, first_name] if name]) if any([last_name, first_name]) else ''
-	return string 
-
-print(format_name("Ernest", "Hemingway"))
-# Should return the string "Name: Hemingway, Ernest"
-
-print(format_name("", "Madonna"))
-# Should return the string "Name: Madonna"
-
-print(format_name("Voltaire", ""))
-# Should return the string "Name: Voltaire"
-
-print(format_name("", ""))
-# Should return an empty string
-```
-
-
-> Awesome! You're getting the hang of the multiple and
-embedded "if" clauses!
+> Woohoo! You remembered all of the elements of the range of
+the for-loop, well done!
 
 <br>
 
 ## Question 7
 
-The longest_word function is used to compare 3 words. It should return the word with the most number of characters (and the first in the list when they have the same length). Fill in the blank to make this happen.
+The following code raises an error when executed. What's the reason for the error?
 
 ```python
-def longest_word(word1, word2, word3):
-	if len(word1) >= len(word2) and len(word1) >= len(word3):
-		word = word1
-	elif len(word2) >= len(word1) and len(word2) >= len(word3):
-		word = word2
-	else:
-		word = word3
-	return(word)
-
-print(longest_word("chair", "couch", "table"))
-print(longest_word("bed", "bath", "beyond"))
-print(longest_word("laptop", "notebook", "desktop"))
+def decade_counter():
+	while year < 50:
+		year += 10
+	return year
 ```
-> You got it! You've figured out how to use an elif clause,
-well done!
+
+
+* Incrementing by 10 instead of 1
+* **Failure to initialize variables**
+* Nothing is happening inside the while loop
+* Wrong comparison operator
+
+> Well done! The variable year needs to be initialized prior to being used in the while loop.
 
 <br>
 
 ## Question 8
 
-What’s the output of this code?
+What is the value of x at the end of the following code?
 
 ```python
-def sum(x, y):
-		return(x+y)
-print(sum(sum(1,2), sum(3,4)))
-
-**10**
-
+for x in range(1, 10, 3):
+    print(x)
 ```
-> You nailed it! We’re calling the sum function 3 times: returning 3, then 7, then adding up 3 plus 7 for the total of 10.
+**7**
+> You got it! The upper limit of a range isn’t included, which means that the loop stops before reaching it. The increment is 3, so the loop stops when x reaches 7.
 
 <br>
 
 ## Question 9
-What's the value of this Python expression?
+What is the value of y at the end of the following code?
 
-((10 >= 5*2) and (10 <= 5*2))
+```python
+for x in range(10):
+    for y in range(x):
+        print(y)
+```
+**8**
 
-* **True**
-* False
-* 10
-* 5*2
 
-
-> Right on! When using the "and" operator, a statement is True if both parts of the conditional are True.
+> Great job! The upper limit of a range isn’t included, which means that the outer loop goes up to 9, so the highest upper limit for the inner loop is 9, which is also not included.
 
 <br>
 
 ## Question 10
 
-The fractional_part function divides the numerator by the denominator, and returns just the fractional part (a number between 0 and 1). Complete the body of the function so that it returns the right number.
-Note: Since division by 0 produces an error, if the denominator is 0, the function should return 0 instead of attempting the division.
+How does this function need to be called to print yes, no, and maybe as possible options to vote for?
 
 ```python
-def fractional_part(numerator, denominator):
-	# Operate with numerator and denominator to 
-# keep just the fractional part of the quotient
-	if denominator == 0:
-		return 0
-	else:
-		result = (numerator/denominator)%1
-		return result
-
-
-
-print(fractional_part(5, 5)) # Should be 0
-print(fractional_part(5, 4)) # Should be 0.25
-print(fractional_part(5, 3)) # Should be 0.66...
-print(fractional_part(5, 2)) # Should be 0.5
-print(fractional_part(5, 0)) # Should be 0
-print(fractional_part(0, 5)) # Should be 0
+def votes(params):
+	for vote in params:
+	    print("Possible option:" + vote)
 ```
 
-> Well done! You're handling the math operations, as well as
-division by 0, perfectly!
+* votes("yes", "no", "maybe")
+* votes(yes, no, maybe)
+* votes([yes, no, maybe])
+* **votes(['yes', 'no', 'maybe'])**
+
+> Excellent! This function is looking for one argument, and the list of strings is just one argument. 

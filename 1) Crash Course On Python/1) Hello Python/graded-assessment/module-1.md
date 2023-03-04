@@ -4,7 +4,7 @@ __Grade received: 100%__
 
 <br>
 
-### Question 1
+## Question 1
 
 What is a computer program?
 

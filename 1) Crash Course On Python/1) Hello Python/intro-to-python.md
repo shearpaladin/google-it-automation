@@ -4,7 +4,7 @@ __Grade received: 100%__
 
 <br>
 
-### Question 1
+## Question 1
 
 Fill in the correct Python command to put “My first Python program” onto the screen.
 

@@ -4,7 +4,7 @@ __Grade received: 100%__
 
 <br>
 
-### Question 1
+## Question 1
 
 This function converts miles to kilometers (km).
 

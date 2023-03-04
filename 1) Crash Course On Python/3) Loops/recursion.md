@@ -1,4 +1,4 @@
-## Practice Quiz: For Loops
+## Practice Quiz: Recursion
 
 __Grade received: 100%__
 
@@ -6,20 +6,20 @@ __Grade received: 100%__
 
 ## Question 1
 
-How are while loops and for loops different in Python?
+What is recursion used for?
 
-* While loops can be used with all data types, for loops can only be used with numbers.
-* For loops can be nested, but while loops can't.
-* **While loops iterate while a condition is true, for loops iterate through a sequence of elements.**
-* While loops can be interrupted using break, for loops using continue.
+* Recursion is used to create loops in languages where other loops are not available.
+* We use recursion only to implement mathematical formulas in code.
+* Recursion is used to iterate through sequences of files and directories.
+* **Recursion lets us tackle complex problems by reducing the problem to a simpler one.**
 
-> You got it! We can use while loops when we want our code to execute repeatedly while a condition is true, and for loops when we want to execute a block of code for each element of a sequence.
+> You nailed it! By reducing the problem to a smaller one each time a recursive function is called, we can tackle complex problems in simple steps.
 
 <br>
 
 ## Question 2
 
-Fill in the blanks to make the factorial function return the factorial of n. Then, print the first 10 factorials (from 0 to 9) with the corresponding number. Remember that the factorial of a number is defined as the product of an integer and all integers before it. For example, the factorial of five (5!) is equal to 1*2*3*4*5=120. Also recall that the factorial of zero (0!) is equal to 1.
+Which of these activities are good use cases for recursive programs? Check all that apply.
 
 ```python
 def factorial(n):

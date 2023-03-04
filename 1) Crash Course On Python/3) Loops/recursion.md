@@ -21,7 +21,6 @@ What is recursion used for?
 
 Which of these activities are good use cases for recursive programs? Check all that apply.
 
-
 * **Going through a file system collecting information related to directories and files.**
 
 > Right on! Because directories can contain subdirectories that can contain more subdirectories, going through these contents is a good use case for a recursive program.
